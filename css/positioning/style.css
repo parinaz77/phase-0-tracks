@@ -1,11 +1,11 @@
 #horizontal{
   position: absolute;
-  top: 0; bottom:0; left: 0; right:0;
+  top: 10px; bottom:0; left: 0; right:0;
   margin: auto;
 }
 #hat {
   position: absolute;
-  top: 0; bottom:300px; left: 0; right:0;
+  top: 0; bottom:300px; left: 20px; right:0px;
   margin: auto;
   z-index: 1;
 }
