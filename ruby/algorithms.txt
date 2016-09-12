@@ -1,0 +1,9 @@
+#Elevator practice 
+-to press the elevator buttom, there are 2 options, up and down.
+-based on if you are going a floor up or a floor down press the buttom
+-when the elevator doors open look at the flashes on top of the door
+-if the up flash light is on, the elevator is going up and if the down flash light is on, the elevator is going down
+-if you are going up and the up flash light is on, go in the elevator
+-if you are going down and the down flash light in on, go in the elevator
+-otherwise, wait for the elevator to go and come back
+
