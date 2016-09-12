@@ -23,3 +23,9 @@ age = nil
 puts "enter age please"
 age = gets.chop
 
+if volume < 5
+  puts "Hamster with name: #{name}, and volume: #{volume}, and age: #{age}, is a good candidate"
+
+elsif volume >= 5
+  puts "Hamster with name: #{name}, and volume: #{volume}, and age of: #{age}, is not a good candidate"
+end
