@@ -7,3 +7,11 @@
 -if you are going down and the down flash light in on, go in the elevator
 -otherwise, wait for the elevator to go and come back
 
+#which fruit is better for you, apple or orange
+-do you like sour?
+-are you sick right now?
+-do you have acidic stomach?
+-if you dont like sour answer is apple
+-if you like sour and you are not sick and not acidic stomach, you can have both
+-if you like sour and you are sick and not acidic stomach, answer is orange
+-otherwise, apple
