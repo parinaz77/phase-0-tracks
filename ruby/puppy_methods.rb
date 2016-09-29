@@ -75,7 +75,7 @@ class Kitten
   def chase
     puts "*chases toy*"
   end
-
+#kitten.new.chase
 end
 
 kittens = []
