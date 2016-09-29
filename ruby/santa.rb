@@ -1,4 +1,6 @@
 class Santa
+  attr_accessor :gender
+  attr_reader :age :ethnicity
   def initialize(gender, ethnicity)
     puts "Initializing Santa instance..."
     @gender=gender
@@ -11,6 +13,15 @@ class Santa
   end
   def eat_milk_and_cookies(type)
     puts"that was a good #{type}"
+  end
+  def celebrate_birthday
+    @age +=1
+  end
+  def get_mad_at (name)
+    if @reindeer_ranking.include?(name)
+      @reindeer_ranking.delete(name)
+      @reindeer_ranking << name
+    end
   end
 end
 # santa = Santa.new
