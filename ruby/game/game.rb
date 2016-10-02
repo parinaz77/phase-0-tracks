@@ -37,7 +37,6 @@ class Game
   def game_over(guess_word)
     if guess_word == @word
       @game_over=true
-
       @game_over
     end
     @game_over
@@ -56,9 +55,9 @@ while i < game.word.length+1
         game.feedback(@guess_word)
       end
     end
-  else
+  elsif game.game_over(@guess_word)
     p "You Wone!!"
-    return
+    break
   end
   i+=1
 end
