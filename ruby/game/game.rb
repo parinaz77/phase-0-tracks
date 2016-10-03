@@ -44,7 +44,7 @@ class Game
 end
 
 i = 1
-game = Game.new("welcome")
+game = Game.new("hey")
 while i < game.word.length+1
   if !game.game_over(@guess_word)
     puts "This is try # #{i}"
