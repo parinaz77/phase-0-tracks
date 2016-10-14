@@ -1,0 +1,43 @@
+sqlite> SELECT * FROM students;
+1|Jo Bi|14|true|1
+2|Bill Sandy|16|false|2
+3|Jack Ji|15|true|1
+
+sqlite> SELECT * FROM students, classGroups WHERE students.groups = classGroups.id;
+1|Jo Bi|14|true|1|1|Fast Learner
+2|Bill Sandy|16|false|2|2|Slow Learner
+3|Jack Ji|15|true|1|1|Fast Learner
+sqlite> .exit
+
+sqlite> UPDATE students SET age=17 WHERE name="Jo Bi";
+sqlite> SELECT * FROM students;
+1|Jo Bi|17|true|1
+2|Bill Sandy|16|false|2
+3|Jack Ji|15|true|1
+
+sqlite> SELECT students.name, students.age, classGroups.groupName FROM students JOIN classGroups ON students.groups = classGroups.id;
+Jo Bi|17|Fast Learner
+Bill Sandy|16|Slow Learner
+Jack Ji|15|Fast Learner
+
+sqlite> DELETE FROM students WHERE groups = 2;
+sqlite> SELECT * FROM students;
+1|Jo Bi|17|true|1
+3|Jack Ji|15|true|1
+
+sqlite> SELECT students.name, students.age, classGroups.groupName FROM students LEFT OUTER JOIN classGroups ON students.groups = classGroups.id;
+Jo Bi|17|Fast Learner
+Jack Ji|15|Fast Learner
+
+**ADDED MORE LINES TO THE STUDENTS TABLE**
+sqlite> SELECT * FROM students;
+1|Jo Bi|17|true|1
+3|Jack Ji|15|true|1
+4|Jib Kib|12|false|1
+5|Viki Somi|12|false|2
+6|Jim Kivi|10|true|1
+
+sqlite> SELECT students.name, students.age, classGroups.groupName FROM students LEFT OUTER JOIN classGroups ON students.groups = classGroups.id WHERE classGroups.id =2;
+Viki Somi|12|Slow Learner
+
+
