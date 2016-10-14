@@ -1,0 +1,11 @@
+sqlite> SELECT businesses.name, ussers.firstName,ussers.lastName,reviews.stars, reviews.comment FROM reviews LEFT OUTER JOIN businesses ON businesses.id = reviews.business_id
+   ...> LEFT OUTER JOIN ussers ON ussers.id = reviews .ussers_id;               Amir's Towing|Bradford|Pitt|5|Great Food
+Amir's Towing|Angela|Jolie|3|OK Food
+The Beagle Nightclub|Mandy|Kaling|1|Bad Food
+
+
+sqlite> SELECT businesses.name, ussers.firstName,ussers.lastName,reviews.stars, reviews.comment FROM reviews LEFT OUTER JOIN businesses ON businesses.id = reviews.business_id
+   ...> LEFT OUTER JOIN ussers ON ussers.id = reviews .ussers_id
+   ...> WHERE businesses.name ="Amir's Towing";
+Amir's Towing|Bradford|Pitt|5|Great Food
+Amir's Towing|Angela|Jolie|3|OK Food
