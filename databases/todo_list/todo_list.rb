@@ -36,7 +36,7 @@ def drop_table(db)
   db.execute("DROP TABLE todo_list")
 end
 
-# # enter data
+# enter data
 def get_data(db)
   puts "Enter item you need to do"
   items = gets.chomp
@@ -92,6 +92,7 @@ while validat_status
     puts "ERROR! Enter valid number"
   end
 end
+
 
 
 
