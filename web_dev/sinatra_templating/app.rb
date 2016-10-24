@@ -22,11 +22,6 @@ get '/campus/new' do
   erb :campus
 end
 
-#####I wanted to search names for the given campus
-# get '/campus_list' do
-#   @campus = db.execute("SELECT * FROM students WHERE campus = ?",[params['campus']])
-#   erb :campuses
-# end
 
 post '/campus_list' do
   @students = db.execute("SELECT * FROM students WHERE campus = ?", [params['campus']])
