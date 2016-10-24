@@ -1,13 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Select age</title>
+  <title>Select Campus</title>
 </head>
   <body>
-    <p> What student you want to delete based on age? </p>
-    <form action="/campus" method="POST">
-      <input type="text" name="age" placeholder="age">
-      <button type="submit">Delete</button>
+    <p> What campus you want to search? </p>
+    <form action="/campus_list" method="POST">
+      <input type="text" name="campus" placeholder="Campus">
+      <button type="submit">Search</button>
     </form>
+    <p> To go back to the main page click <a href="/">here</a>
+
+       <ul>
+    <% @campus.each do |student| %>
+      <li><%= student['name'] %>, <%= student['campus'] %></li>
+    <% end %>
+  </ul>
 </body>
 </html>

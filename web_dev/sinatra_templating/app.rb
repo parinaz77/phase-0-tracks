@@ -18,6 +18,7 @@ get '/students/new' do
 end
 
 get '/campus/new' do
+  @campus = db.execute("SELECT * FROM students")
   erb :campus
 end
 
@@ -27,9 +28,9 @@ end
 #   erb :campuses
 # end
 
-post '/campus' do
-  db.execute("DELETE FROM students WHERE age = ?", [params['age']])
-  redirect '/'
+post '/campus_list' do
+  @students = db.execute("SELECT * FROM students WHERE campus = ?", [params['campus']])
+  erb :campuses
 end
 
 # create new students via
